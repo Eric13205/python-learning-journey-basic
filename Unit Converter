@@ -1,0 +1,85 @@
+while True:
+    print("===== UNIT CONVERTER =====")
+    choice_1 = input("temperature 2. Length 3. Weight (Choose category) : ")
+    choice_1 = int(choice_1)
+    if choice_1 == 1:
+        print("===== TEMPERATURE =====")
+        choice_2= int(input('1. Celsius to Fahrenheit 2. Fahrenheit to Celsius : '))
+        choice_2 = int(choice_2)
+        if choice_2 == 1:
+            c = float(input("Enter Celsius : "))
+            f = (c * 9/5) + 32
+            print(f'Celsius : {c}')
+            print(f'Result : {f} Fahrenheit')
+        elif choice_2 == 2:
+            f = float(input("Enter Fahrenheit : "))
+            c = (f - 32) * 5/9
+            print(f'Fahrenheit : {f}')
+            print(f'Result : {c} Celsius')
+        else:
+            print("Invalid Operation please choice 1,2")
+    elif choice_1 == 2:
+        print("===== LENGTH =====")
+        choice_2 = input("1. Kilometer to  Meter 2. Meter to Kilometer 3. Meter To Centimeter 4. Centimeter To Meter : ")
+        choice_2 = int(choice_2)
+        if choice_2 == 1:
+            km = float(input("Enter Kilometer : "))
+            m = km * 1000
+            print(f'Kilometer : {km}')
+            print(f'Result : {m} meter')
+        elif choice_2 == 2:
+            m = float(input(" Enter Meter : "))
+            km = m / 1000
+            print(f'Meter : {m}')
+            print(f'result : {km} Kilometer ')
+        elif choice_2 == 3 :
+           m = float(input(" Enter Meter : "))
+           cm = m * 100
+           print(f'Meter : {m}')
+           print(f'result : {cm} centimeter ')
+        elif choice_2 == 4:
+            cm = float(input(" Enter centimeter : "))
+            m = cm / 100
+            print(f'Centimeter : {cm}')
+            print(f'result : {m} Meter ')
+        else:
+            print("Invalid Operation please choice 1,2,3,4")
+    elif choice_1 == 3:
+        print("=====Weight=====")
+        choice_2 = input("1. Kilogram to Gram 2. Gram to  Kilogram 3. Kilogram to  Pound 4. Pound to Kilogram : ")
+        choice_2 = int(choice_2)
+        if choice_2 == 1:
+            kg = float(input("Enter Kilogram : "))
+            g = kg * 1000
+            print(f'Kilogram : {kg}')
+            print(f'Result : {g} Gram')
+        elif choice_2 == 2:
+            g = float(input("Enter Gram : "))
+            kg = g / 1000
+            print(f'Gram : {g}')
+            print(f'Result : {kg} Kilogram')
+        elif choice_2 == 3:
+            kg = float(input("Enter Kilogram : "))
+            lb = kg * 2.20462
+            print(f'Kilogram : {kg}')
+            print(f'Result : {lb} Pound')
+        elif choice_2 == 4:
+            lb = float(input("Enter Pound : "))
+            kg = lb / 2.20462
+            print(f'Pound : {lb}')
+            print(f'Result : {kg} Kilogram')
+        else:
+            print("Invalid Operation please choice 1,2,3,4")
+    else:
+        print("Invalid Operation please choice 1,2,3")
+    reason = input('Do you want again ? PLease say Yes or NO :').lower()
+    if reason == "no":
+        print("Thank you for using Unit Converter!")
+        break
+
+    elif reason == "yes":
+        continue
+
+    else:
+        print("Invalid response. The program will continue.")
+
